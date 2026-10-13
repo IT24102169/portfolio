@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="images/my-photo.jpg" alt="Ahmed Aazib" />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <header class="navbar">
+      <div class="logo">Dev.</div>
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:+94770126266" class="btn-pill">
+        Get in touch
+        <span class="dot-btn"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </header>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <p class="eyebrow">Hey, I'm a</p>
+        <h1>Software<br />Developer</h1>
+      </div>
+      <div class="hero-right">
+        <h3>Building apps that<br />feel simple to use.</h3>
+        <p>Full-stack developer comfortable across HTML, CSS, JavaScript, Node.js, Express.js and MongoDB.</p>
+      </div>
+    </div>
+
+    <div class="hero-tags">
+      <div class="tag-item"><span>#01</span> Full-Stack Development</div>
+      <div class="tag-item"><span>#02</span> Web Applications</div>
+      <div class="tag-item"><span>#03</span> Database Design</div>
+      <div class="tag-item"><span>#04</span> Problem Solving</div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        IT undergraduate with a focus on software development and software engineering.
+        Comfortable across the stack with HTML, CSS, JavaScript, Node.js, Express.js and MongoDB,
+        gained through a series of academic group projects covering monitoring systems, ticketing,
+        customer support and booking platforms. I enjoy picking up new tools, solving practical
+        problems, and building applications that are straightforward for end users.
+      </p>
+
+      <div class="about-meta">
+        <div class="meta-item">
+          <span class="meta-label">Education</span>
+          <span class="meta-value">SLIT — BSc (Hons) IT, 2024–2028</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Location</span>
+          <span class="meta-value">Puttalam, Sri Lanka</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Languages</span>
+          <span class="meta-value">English · Sinhala · Tamil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="projects" id="projects">
+
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-desc">
+      A collection of academic and personal builds covering monitoring systems,
+      ticketing, customer care, and booking platforms — built end-to-end.
+    </p>
+
+    <div class="project-grid">
+
+      <!-- ============== PROJECT 1: BABY MONITOR ============== -->
+      <article class="project-card">
+        <span class="tag">IoT · Year 1, Sem 1</span>
+
+        <div class="mockup mockup-baby">
+          <div class="mock-header">
+            <span class="mock-dot red"></span>
+            <span class="mock-dot yellow"></span>
+            <span class="mock-dot green"></span>
+            <span class="mock-title">Baby Monitor — Live</span>
+          </div>
+          <div class="mock-body">
+            <div class="monitor-row">
+              <div class="monitor-card">
+                <i class="fa-solid fa-baby"></i>
+                <span class="monitor-label">Crying</span>
+                <span class="monitor-value alert">DETECTED</span>
+                <div class="wave"></div>
+              </div>
+              <div class="monitor-card">
+                <i class="fa-solid fa-temperature-half"></i>
+                <span class="monitor-label">Temp</span>
+                <span class="monitor-value ok">36.7°C</span>
+                <div class="bar"><span style="width:65%"></span></div>
+              </div>
+            </div>
+            <div class="mock-log">
+              <div><span class="time">12:04</span> Sound alert triggered</div>
+              <div><span class="time">12:03</span> Temp stable — 36.7°C</div>
+              <div><span class="time">11:58</span> Monitoring active</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h4><span class="brand">Baby</span> Monitoring System</h4>
+          <p>Real-time baby monitoring with sound detection for crying and continuous temperature tracking to flag unsafe conditions early. Handled sensor data and alert logic.</p>
+        </div>
+      </article>
+
+      <!-- ============== PROJECT 2: TICKET ============== -->
+      <article class="project-card">
+        <span class="tag">Web · Year 1, Sem 2</span>
+
+        <div class="mockup mockup-ticket">
+          <div class="mock-sidebar">
+            <div class="sb-item active"><i class="fa-solid fa-ticket"></i></div>
+            <div class="sb-item"><i class="fa-solid fa-chart-simple"></i></div>
+            <div class="sb-item"><i class="fa-solid fa-users"></i></div>
+            <div class="sb-item"><i class="fa-solid fa-gear"></i></div>
+          </div>
+          <div class="mock-main">
+            <div class="mock-main-head">
+              <h5>Admin Panel</h5>
+              <span class="badge-open">12 Open</span>
+            </div>
+            <div class="ticket-row"><span class="pri high">HIGH</span> Login issue — can't reset password</div>
+            <div class="ticket-row"><span class="pri mid">MED</span> Payment page layout broken</div>
+            <div class="ticket-row"><span class="pri low">LOW</span> Update help docs</div>
+            <div class="ticket-row"><span class="pri mid">MED</span> Notification emails delayed</div>
+            <div class="ticket-row"><span class="pri low">LOW</span> Add dark mode option</div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h4><span class="brand">Ticket</span> Management System</h4>
+          <p>Full online ticket handling system with HTML, CSS, JavaScript and Node.js. Admin panel with consolidated view of open issues, priorities and workload.</p>
+        </div>
+      </article>
+
+      <!-- ============== PROJECT 3: CUSTOMER CARE ============== -->
+      <article class="project-card">
+        <span class="tag">Web · Year 2, Sem 1</span>
+
+        <div class="mockup mockup-care">
+          <div class="mock-header">
+            <span class="mock-dot red"></span>
+            <span class="mock-dot yellow"></span>
+            <span class="mock-dot green"></span>
+            <span class="mock-title">Customer Care — Inbox</span>
+          </div>
+          <div class="care-body">
+            <div class="care-left">
+              <div class="care-msg active">
+                <strong>Nimal P.</strong>
+                <span>Order not received...</span>
+              </div>
+              <div class="care-msg">
+                <strong>Priya S.</strong>
+                <span>Refund status query</span>
+              </div>
+              <div class="care-msg">
+                <strong>Kasun R.</strong>
+                <span>Login help needed</span>
+              </div>
+            </div>
+            <div class="care-right">
+              <div class="care-bubble incoming">Hi, my order #4821 hasn't arrived yet. Can you check?</div>
+              <div class="care-bubble outgoing">Hi Nimal! Let me check that for you right away.</div>
+              <div class="care-bubble incoming">Thank you 🙏</div>
+              <div class="care-input">
+                <span>Type a reply…</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h4><span class="brand">Customer</span> Care System</h4>
+          <p>Responsive customer support website with client and server-side validation. MongoDB-backed inquiry storage for efficient staff review and response.</p>
+        </div>
+      </article>
+
+      <!-- ============== PROJECT 4: TOUR BOOKING ============== -->
+      <article class="project-card">
+        <span class="tag">Web · Year 2, Sem 2</span>
+
+        <div class="mockup mockup-tour">
+          <div class="mock-header">
+            <span class="mock-dot red"></span>
+            <span class="mock-dot yellow"></span>
+            <span class="mock-dot green"></span>
+            <span class="mock-title">Smart Tour Booking</span>
+          </div>
+
+          <div class="tour-body">
+            <div class="tour-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Search destinations…</span>
+            </div>
+
+            <div class="tour-cards">
+
+              <div class="tour-card">
+                <div class="tour-thumb" data-place="mirissa"></div>
+                <div class="tour-info">
+                  <strong>Mirissa Beach</strong>
+                  <span>3 Days · $180</span>
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.9 (128)
+                  </div>
+                </div>
+              </div>
+
+              <div class="tour-card">
+                <div class="tour-thumb" data-place="ella"></div>
+                <div class="tour-info">
+                  <strong>Ella Hills</strong>
+                  <span>2 Days · $140</span>
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.7 (94)
+                  </div>
+                </div>
+              </div>
+
+              <div class="tour-card">
+                <div class="tour-thumb" data-place="kandy"></div>
+                <div class="tour-info">
+                  <strong>Kandy Temple</strong>
+                  <span>1 Day · $75</span>
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.8 (76)
+                  </div>
+                </div>
+              </div>
+
+              <div class="tour-card">
+                <div class="tour-thumb" data-place="galle"></div>
+                <div class="tour-info">
+                  <strong>Galle Fort</strong>
+                  <span>2 Days · $160</span>
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.9 (142)
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="tour-btn">Confirm Reservation</div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h4><span class="brand">Smart</span> Tour Booking</h4>
+          <p>Web-based tour booking platform covering the full flow from package search to confirming a reservation. Database-backed reservation management.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA / CONTACT ================= -->
+  <section class="cta" id="contact">
+    <div class="cta-box">
+      <h2>Ready to Start Your Next Project?</h2>
+      <p>Let's collaborate to build memorable digital products that elevate your business.</p>
+
+      <div class="contact-grid">
+        <a href="tel:+94770126266" class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span class="c-label">Phone</span>
+            <span class="c-value">077 012 6266</span>
+          </div>
+        </a>
+
+        <a href="mailto:ahmedaazib1@gmail.com" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span class="c-label">Email</span>
+            <span class="c-value">ahmedaazib1@gmail.com</span>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span class="c-label">Location</span>
+            <span class="c-value">Puttalam, Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="mailto:ahmedaazib1@gmail.com" class="btn-cta">
+        Send me an email
+        <span class="dot-btn"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Aazib</h3>
+        <p>IT undergraduate building clean, practical web applications end-to-end.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+94770126266">077 012 6266</a>
+        <a href="mailto:ahmedaazib1@gmail.com">ahmedaazib1@gmail.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Location</h4>
+        <span>Lane No. 11,</span>
+        <span>Hasanath Masjith Road,</span>
+        <span>Puttalam</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ahmed Aazib. All rights reserved.</p>
+      <a href="#top" class="back-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
