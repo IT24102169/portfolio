@@ -674,6 +674,57 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
   flex-shrink: 0;
 }
+
+/* ================= MUSIC TOGGLE ================= */
+.music-toggle {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #ff4b1f;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(255, 75, 31, 0.45);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+  background: #ff6338;
+}
+
+/* Pulsing ring animation while music is playing */
+.music-toggle.playing {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 10px 25px rgba(255, 75, 31, 0.45), 0 0 0 0 rgba(255, 75, 31, 0.55); }
+  70%  { box-shadow: 0 10px 25px rgba(255, 75, 31, 0.45), 0 0 0 18px rgba(255, 75, 31, 0); }
+  100% { box-shadow: 0 10px 25px rgba(255, 75, 31, 0.45), 0 0 0 0 rgba(255, 75, 31, 0); }
+}
+
+/* Icon swap: music note when off, pause when playing */
+.music-toggle.playing i::before { content: "\f04c"; } /* fa-pause */
+
+/* Smaller on mobile */
+@media (max-width: 600px) {
+  .music-toggle {
+    bottom: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+  }
+}
 /* ================= CTA / CONTACT SECTION ================= */
 .cta {
   padding: 100px 55px 120px;

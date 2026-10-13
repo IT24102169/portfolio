@@ -77,3 +77,63 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+/* =========================================================
+   MUSIC TOGGLE — ambient background music
+   ========================================================= */
+const musicBtn   = document.getElementById('musicToggle');
+const bgMusic    = document.getElementById('bgMusic');
+const MUSIC_KEY  = 'portfolio-music-on';
+
+if (musicBtn && bgMusic) {
+  bgMusic.volume = 0.35; // adjust 0.0 – 1.0
+
+  // Restore previous choice on page load
+  const savedState = localStorage.getItem(MUSIC_KEY);
+
+  if (savedState === 'on') {
+    // Try to autoplay — browsers may block until first click
+    bgMusic.play().then(() => {
+      musicBtn.classList.add('playing');
+    }).catch(() => {
+      // Autoplay blocked — wait for user interaction
+      const unlock = () => {
+        bgMusic.play().then(() => musicBtn.classList.add('playing')).catch(() => {});
+        document.removeEventListener('click', unlock);
+      };
+      document.addEventListener('click', unlock);
+    });
+  }
+
+  // Toggle on click
+  musicBtn.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.volume = 0;
+      bgMusic.play();
+      // Fade volume up
+      let v = 0;
+      const fade = setInterval(() => {
+        v += 0.02;
+        if (v >= 0.35) { v = 0.35; clearInterval(fade); }
+        bgMusic.volume = v;
+      }, 40);
+
+      musicBtn.classList.add('playing');
+      localStorage.setItem(MUSIC_KEY, 'on');
+    } else {
+      // Fade volume down, then pause
+      let v = bgMusic.volume;
+      const fade = setInterval(() => {
+        v -= 0.02;
+        if (v <= 0) {
+          v = 0;
+          bgMusic.pause();
+          clearInterval(fade);
+        }
+        bgMusic.volume = v;
+      }, 40);
+
+      musicBtn.classList.remove('playing');
+      localStorage.setItem(MUSIC_KEY, 'off');
+    }
+  });
+}
